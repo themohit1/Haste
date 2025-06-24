@@ -1,1 +1,103 @@
-# Haste
+
+# Mode – Secure Peer-to-Peer File Sharing
+
+**Mode** is a minimal and secure peer-to-peer file sharing application built using **Node.js**, **Socket.IO**, **PeerJS**, and **Express**. Files are shared directly between peers without uploading them to a server, ensuring privacy and efficiency.
+
+---
+
+## 🚀 Features
+
+- 🔐 **Private & Secure**: Files are transferred peer-to-peer using WebRTC.
+- ⚡ **Real-Time Communication**: Socket.IO handles signaling and real-time updates.
+- 🎨 **Modern UI**: Clean, responsive design with TailwindCSS.
+- 🧩 **Unique Session IDs**: Each session is protected by a generated ID, preventing unauthorized access.
+- 🔁 **One-Time Share**: Sessions are automatically removed once the sender disconnects.
+
+---
+
+## 🧪 Live Demo
+
+> *(You can host it and link here, e.g., **https://mode-share-demo.vercel.app**)*
+
+---
+
+## 🛠️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/mode.git
+cd mode
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the server:
+
+```bash
+npm start
+```
+
+Then open your browser and navigate to:  
+📍 `http://localhost:3000`
+
+---
+
+## 🧱 Project Structure
+
+```
+mode/
+├── public/
+│   ├── index.html         # Main frontend UI
+│   └── script.js          # Frontend logic (must be created or edited)
+├── server.js              # Express + Socket.IO server
+├── package.json           # Project metadata & dependencies
+```
+
+---
+
+## 📦 Dependencies
+
+- [Express](https://expressjs.com/)
+- [Socket.IO](https://socket.io/)
+- [PeerJS](https://peerjs.com/)
+- [TailwindCSS](https://tailwindcss.com/) (via CDN)
+
+---
+
+## 📸 Screenshots
+
+*(Add screenshots of the UI here for better presentation.)*
+
+---
+
+## 🧩 How It Works
+
+1. **Sender** uploads a file and receives a shareable link with a unique ID.
+2. **Receiver** uses the link to connect and receive file details.
+3. Upon acceptance, a direct connection via PeerJS/WebRTC is established for file transfer.
+4. The session is deleted once the sender disconnects.
+
+---
+
+## 🔐 Security Notes
+
+- No file data is stored or routed through the backend server.
+- Socket.IO is used **only for signaling and session management**.
+- Disconnecting from a session destroys it immediately.
+
+---
+
+## 📄 License
+
+MIT License © 2025 [Your Name]
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please open issues and submit pull requests to improve this project.

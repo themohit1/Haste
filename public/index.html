@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mode - Secure File Sharing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-black font-sans flex items-center justify-center min-h-screen p-4 sm:p-6">
+    <div class="w-full max-w-md mx-auto">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold tracking-tight">Mode</h1>
+            <p class="text-zinc-600 mt-2">Secure, peer-to-peer file sharing.</p>
+        </div>
+
+        <div id="sender-ui" class="bg-white border-2 border-black rounded-xl p-6">
+            <div id="upload-container" class="space-y-4 opacity-0 transition-opacity duration-500 ease-out">
+                <div id="upload-area" class="flex flex-col items-center justify-center border-2 border-dashed border-black rounded-lg p-10 cursor-pointer hover:bg-zinc-100 transition-colors">
+                    <input type="file" id="file-input" class="hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-black mb-2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/></svg>
+                    <p class="font-medium">Drop a file or click to upload</p>
+                </div>
+                <div id="file-info" class="text-sm text-zinc-700 min-h-[2em] text-center"></div>
+                <button id="share-btn" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors h-10 px-4 py-2 w-full bg-black text-white hover:bg-zinc-800 disabled:opacity-50 disabled:cursor-not-allowed" disabled>Share File</button>
+            </div>
+            <div id="sharing-container" class="hidden space-y-4 opacity-0 transition-opacity duration-500 ease-out">
+                <div id="sharing-file-info" class="p-4 rounded-md border-2 border-black text-center"></div>
+                <div class="space-y-2">
+                     <p class="text-sm font-medium">Share this link with a friend:</p>
+                     <div class="flex items-center space-x-2">
+                         <input type="text" id="link-input" class="flex h-10 w-full rounded-md border-2 border-black bg-transparent px-3 py-2 text-sm focus:outline-none" readonly>
+                         <button id="copy-btn" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors h-10 px-4 py-2 flex-shrink-0 bg-black text-white hover:bg-zinc-800">
+                             <span id="copy-btn-text">Copy</span>
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="ml-2 hidden"><path d="M20 6 9 17l-5-5"/></svg>
+                         </button>
+                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="receiver-ui" class="bg-white border-2 border-black rounded-xl p-6 space-y-4 hidden opacity-0 transition-opacity duration-500 ease-out">
+            <h2 class="text-xl font-semibold text-center">File Offer</h2>
+            <div id="receiving-file-info" class="p-4 rounded-md border-2 border-black text-center">Waiting for file information...</div>
+            <div id="transfer-stats" class="text-sm font-mono text-zinc-700 text-center min-h-[1.25rem]"></div>
+            <button id="accept-btn" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors h-10 px-4 py-2 w-full bg-black text-white hover:bg-zinc-800 hidden">Download</button>
+            
+            <div id="download-progress-bar" class="w-full h-4 rounded-full border-2 border-black overflow-hidden hidden">
+                <div id="download-progress-fill" class="h-full bg-black transition-all duration-300 ease-linear" style="width: 0%"></div>
+            </div>
+
+            <div id="download-area" class="hidden pt-2">
+                <a id="download-link" href="#" download class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors h-10 px-4 py-2 w-full bg-black text-white hover:bg-zinc-800">Download Complete</a>
+            </div>
+            <div id="error-message" class="text-red-600 text-center text-sm"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
