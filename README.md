@@ -15,7 +15,7 @@
 
 ---
 
-## 🧪 Live Demo
+## 🧪 Live
 
 > **https://haste-fmzh.onrender.com/**
 
