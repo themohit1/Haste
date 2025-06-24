@@ -1,5 +1,5 @@
 
-# Haste – Peer-to-Peer File Sharing
+# Haste
 
 **Haste** is a minimal and secure peer-to-peer file sharing application built using **Node.js**, **Socket.IO**, **PeerJS**, and **Express**. Files are shared directly between peers without uploading them to a server, ensuring privacy and efficiency.
 
