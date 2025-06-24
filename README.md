@@ -17,7 +17,7 @@
 
 ## 🧪 Live Demo
 
-> *(You can host it and link here, e.g., **https://mode-share-demo.vercel.app**)*
+> **https://mode-share-demo.vercel.app**
 
 ---
 
@@ -89,15 +89,3 @@ mode/
 - No file data is stored or routed through the backend server.
 - Socket.IO is used **only for signaling and session management**.
 - Disconnecting from a session destroys it immediately.
-
----
-
-## 📄 License
-
-MIT License © 2025 [Your Name]
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please open issues and submit pull requests to improve this project.
