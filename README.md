@@ -1,13 +1,13 @@
 
-# Mode – Secure Peer-to-Peer File Sharing
+# Haste – Secure Peer-to-Peer File Sharing
 
-**Mode** is a minimal and secure peer-to-peer file sharing application built using **Node.js**, **Socket.IO**, **PeerJS**, and **Express**. Files are shared directly between peers without uploading them to a server, ensuring privacy and efficiency.
+**Haste** is a minimal and secure peer-to-peer file sharing application built using **Node.js**, **Socket.IO**, **PeerJS**, and **Express**. Files are shared directly between peers without uploading them to a server, ensuring privacy and efficiency.
 
 ---
 
 ## 🚀 Features
 
-- 🔐 **Private & Secure**: Files are transferred peer-to-peer using WebRTC.
+- 🔐 **Transferring**: Files are transferred peer-to-peer using WebRTC.
 - ⚡ **Real-Time Communication**: Socket.IO handles signaling and real-time updates.
 - 🎨 **Modern UI**: Clean, responsive design with TailwindCSS.
 - 🧩 **Unique Session IDs**: Each session is protected by a generated ID, preventing unauthorized access.
@@ -17,7 +17,7 @@
 
 ## 🧪 Live Demo
 
-> **https://mode-share-demo.vercel.app**
+> **https://haste-fmzh.onrender.com/**
 
 ---
 
@@ -26,8 +26,8 @@
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/mode.git
-cd mode
+git clone https://github.com/themohit1/Haste.git
+cd Haste
 ```
 
 Install dependencies:
@@ -71,7 +71,7 @@ mode/
 
 ## 📸 Screenshots
 
-*(Add screenshots of the UI here for better presentation.)*
+*screenshots*
 
 ---
 
