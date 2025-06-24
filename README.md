@@ -7,11 +7,11 @@
 
 ## 🚀 Features
 
-- 🔐 **Transferring**: Files are transferred peer-to-peer using WebRTC.
-- ⚡ **Real-Time Communication**: Socket.IO handles signaling and real-time updates.
-- 🎨 **Modern UI**: Clean, responsive design with TailwindCSS.
-- 🧩 **Unique Session IDs**: Each session is protected by a generated ID, preventing unauthorized access.
-- 🔁 **One-Time Share**: Sessions are automatically removed once the sender disconnects.
+- **Transferring**: Files are transferred peer-to-peer using WebRTC.
+- **Real-Time Communication**: Socket.IO handles signaling and real-time updates.
+- **Modern UI**: Clean, responsive design with TailwindCSS.
+- **Unique Session IDs**: Each session is protected by a generated ID, preventing unauthorized access.
+- **One-Time Share**: Sessions are automatically removed once the sender disconnects.
 
 ---
 
@@ -50,7 +50,7 @@ Then open your browser and navigate to:
 ## 🧱 Project Structure
 
 ```
-mode/
+Haste/
 ├── public/
 │   ├── index.html         # Main frontend UI
 │   └── script.js          # Frontend logic (must be created or edited)
@@ -78,7 +78,7 @@ mode/
 ## 🧩 How It Works
 
 1. **Sender** uploads a file and receives a shareable link with a unique ID.
-2. **Receiver** uses the link to connect and receive file details.
+2. **Receiver** uses the link to connect and receive file.
 3. Upon acceptance, a direct connection via PeerJS/WebRTC is established for file transfer.
 4. The session is deleted once the sender disconnects.
 
