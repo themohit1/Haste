@@ -1,6 +1,6 @@
-# Haste - Makinng File sharing easy and faster
+# Haste - File sharing easy and faster
 
-Haste is a secure, minimal, and efficient peer-to-peer file-sharing application built with **Node.js**, **Socket.IO**, **PeerJS**, and **Express**. Designed for privacy and performance, Haste enables direct file transfers between users without storing data on a server.
+Haste is a secure, minimal, and efficient peer-to-peer file-sharing application built with **Node.js**, **Socket.IO**, **PeerJS**, and **Express**. Designed for File sharing and performance, Haste enables direct file transfers between users without storing any data on a server.
 
 ## Features
 
@@ -57,7 +57,7 @@ Follow these steps to set up Haste locally:
 - Express - Web framework for Node.js
 - Socket.IO - Real-time communication library
 - PeerJS - WebRTC peer-to-peer connections
-- TailwindCSS - Utility-first CSS framework (via CDN)
+- TailwindCSS - Utility-first CSS framework (CDN)
 
 ## How It Works
 
@@ -72,6 +72,6 @@ Follow these steps to set up Haste locally:
 - **Signaling Only**: Socket.IO is used exclusively for session management and signaling.
 - **Session**: Sessions are destroyed immediately upon sender disconnection, preventing unauthorized access.
 
-## Contributing
+## Contributions
 
-Contributions are welcome! Please submit issues or pull requests via the GitHub repository.
+Contributions! Please submit issues or pull requests to the GitHub repository.
