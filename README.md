@@ -1,4 +1,4 @@
-# Haste
+# Haste - Makinng File sharing easy and faster
 
 Haste is a secure, minimal, and efficient peer-to-peer file-sharing application built with **Node.js**, **Socket.IO**, **PeerJS**, and **Express**. Designed for privacy and performance, Haste enables direct file transfers between users without storing data on a server.
 
@@ -13,6 +13,17 @@ Haste is a secure, minimal, and efficient peer-to-peer file-sharing application 
 ## Live
 
 https://haste-fmzh.onrender.com
+
+## Project Structure
+
+```
+Haste/
+├── public/
+│   ├── index.html         # Main frontend user interface
+│   └── script.js          # Frontend logic for file sharing
+├── server.js              # Express and Socket.IO server implementation
+├── package.json           # Project metadata and dependencies
+```
 
 ## Installation
 
@@ -40,16 +51,6 @@ Follow these steps to set up Haste locally:
 4. **Access the Application**:\
    Open your browser and navigate to `http://localhost:3000`.
 
-## Project Structure
-
-```
-Haste/
-├── public/
-│   ├── index.html         # Main frontend user interface
-│   └── script.js          # Frontend logic for file sharing
-├── server.js              # Express and Socket.IO server implementation
-├── package.json           # Project metadata and dependencies
-```
 
 ## Dependencies
 
