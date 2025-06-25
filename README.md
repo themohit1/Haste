@@ -17,7 +17,7 @@
 
 ## 🧪 Live
 
-> **https://haste-fmzh.onrender.com/**
+> **https://haste-fmzh.onrender.com**
 
 ---
 
