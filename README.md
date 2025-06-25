@@ -1,91 +1,77 @@
-
 # Haste
 
-**Haste** is a minimal and secure peer-to-peer file sharing application built using **Node.js**, **Socket.IO**, **PeerJS**, and **Express**. Files are shared directly between peers without uploading them to a server, ensuring privacy and efficiency.
+Haste is a secure, minimal, and efficient peer-to-peer file-sharing application built with **Node.js**, **Socket.IO**, **PeerJS**, and **Express**. Designed for privacy and performance, Haste enables direct file transfers between users without storing data on a server.
 
----
+## Features
 
-## 🚀 Features
+- **Peer-to-Peer File Transfer**: Utilizes WebRTC for secure, direct file sharing.
+- **Real-Time Communication**: Leverages Socket.IO for seamless signaling and session management.
+- **Modern User Interface**: Responsive and intuitive design styled with TailwindCSS.
+- **Secure Session Management**: Unique session IDs ensure protected access to file-sharing sessions.
+- **Ephemeral Sessions**: Sessions are automatically terminated when the sender disconnects, ensuring no residual data.
 
-- **Transferring**: Files are transferred peer-to-peer using WebRTC.
-- **Real-Time Communication**: Socket.IO handles signaling and real-time updates.
-- **Modern UI**: Clean, responsive design with TailwindCSS.
-- **Unique Session IDs**: Each session is protected by a generated ID, preventing unauthorized access.
-- **One-Time Share**: Sessions are automatically removed once the sender disconnects.
+## Live
 
----
+Explore Haste at:\
+https://haste-fmzh.onrender.com
 
-## 🧪 Live
+## Installation
 
-> **https://haste-fmzh.onrender.com**
+Follow these steps to set up Haste locally:
 
----
+1. **Clone the Repository**:
 
-## 🛠️ Installation
+   ```bash
+   git clone https://github.com/themohit1/Haste.git
+   cd Haste
+   ```
 
-Clone the repository:
+2. **Install Dependencies**:
 
-```bash
-git clone https://github.com/themohit1/Haste.git
-cd Haste
-```
+   ```bash
+   npm install
+   ```
 
-Install dependencies:
+3. **Start the Server**:
 
-```bash
-npm install
-```
+   ```bash
+   npm start
+   ```
 
-Start the server:
+4. **Access the Application**:\
+   Open your browser and navigate to `http://localhost:3000`.
 
-```bash
-npm start
-```
-
-Then open your browser and navigate to:  
-📍 `http://localhost:3000`
-
----
-
-## 🧱 Project Structure
+## Project Structure
 
 ```
 Haste/
 ├── public/
-│   ├── index.html         # Main frontend UI
-│   └── script.js          # Frontend logic
-├── server.js              # Express + Socket.IO server
-├── package.json           # Project metadata & dependencies
+│   ├── index.html         # Main frontend user interface
+│   └── script.js          # Frontend logic for file sharing
+├── server.js              # Express and Socket.IO server implementation
+├── package.json           # Project metadata and dependencies
 ```
 
----
+## Dependencies
 
-## 📦 Dependencies
+- Express - Web framework for Node.js
+- Socket.IO - Real-time communication library
+- PeerJS - WebRTC peer-to-peer connections
+- TailwindCSS - Utility-first CSS framework (via CDN)
 
-- [Express](https://expressjs.com/)
-- [Socket.IO](https://socket.io/)
-- [PeerJS](https://peerjs.com/)
-- [TailwindCSS](https://tailwindcss.com/) (via CDN)
+## How It Works
 
----
+1. The **sender** uploads a file and receives a unique, shareable link containing a session ID.
+2. The **receiver** accesses the link to join the session.
+3. Upon connection, a direct WebRTC-based file transfer is established via PeerJS.
+4. The session is automatically terminated when the sender disconnects, ensuring data privacy.
 
-## 📸 Screenshots
+## Security Considerations
 
-*screenshots*
+- **No Server Storage**: File data is transferred directly between peers, with no storage or routing through the backend.
+- **Signaling Only**: Socket.IO is used exclusively for session management and signaling.
+- **Session**: Sessions are destroyed immediately upon sender disconnection, preventing unauthorized access.
 
----
+## Contributing
 
-## 🧩 How It Works
-
-1. **Sender** uploads a file and receives a shareable link with a unique ID.
-2. **Receiver** uses the link to connect and receive file.
-3. Upon acceptance, a direct connection via PeerJS/WebRTC is established for file transfer.
-4. The session is deleted once the sender disconnects.
-
----
-
-## 🔐 Security Notes
-
-- No file data is stored or routed through the backend server.
-- Socket.IO is used **only for signaling and session management**.
-- Disconnecting from a session destroys it immediately.
+Contributions are welcome! Please submit issues or pull requests via the GitHub repository.
