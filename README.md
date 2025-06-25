@@ -53,7 +53,7 @@ Then open your browser and navigate to:
 Haste/
 ├── public/
 │   ├── index.html         # Main frontend UI
-│   └── script.js          # Frontend logic (must be created or edited)
+│   └── script.js          # Frontend logic
 ├── server.js              # Express + Socket.IO server
 ├── package.json           # Project metadata & dependencies
 ```
