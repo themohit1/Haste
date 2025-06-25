@@ -12,7 +12,6 @@ Haste is a secure, minimal, and efficient peer-to-peer file-sharing application 
 
 ## Live
 
-Explore Haste at:\
 https://haste-fmzh.onrender.com
 
 ## Installation
